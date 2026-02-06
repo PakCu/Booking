@@ -1,0 +1,383 @@
+/* Custom CSS for SPD Production */
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23222" width="1200" height="600"/></svg>');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    width: 100%;
+    padding: 2rem;
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    border: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+.btn-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(243, 156, 18, 0.4);
+    color: white;
+}
+
+/* Section Styling */
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    margin: 1rem auto;
+}
+
+/* Service Cards */
+.service-card {
+    transition: all 0.3s;
+    border: none;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+.service-icon {
+    font-size: 3rem;
+}
+
+/* Gallery */
+.gallery-item {
+    position: relative;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+}
+
+.gallery-icon {
+    font-size: 3rem;
+    color: white;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+/* Testimonials */
+.testimonial-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.testimonial-card {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    backdrop-filter: blur(10px);
+}
+
+/* Booking Header */
+.booking-header {
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.progress-dots {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d0d0d0;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: #1a1a1a;
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* Theme Cards */
+.theme-card {
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid #e5e5e5;
+    position: relative;
+}
+
+.theme-card:hover {
+    border-color: #ccc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.theme-card.selected {
+    border-color: #1a1a1a;
+    background: #fafafa;
+}
+
+.theme-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-card.selected .check-icon {
+    display: flex;
+}
+
+/* Date Cards */
+.date-scroll {
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    scrollbar-width: none;
+}
+
+.date-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.date-card {
+    flex-shrink: 0;
+    width: 80px;
+    background: #f8f9fa;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.date-card:hover {
+    border-color: #ccc;
+    transform: translateY(-2px);
+}
+
+.date-card.selected {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+    color: white;
+}
+
+.star-badge {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.date-month {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+    opacity: 0.7;
+}
+
+.date-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.date-day {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+/* Time Slots */
+.time-slot {
+    background: white;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.time-slot:hover:not(.disabled) {
+    border-color: #1a1a1a;
+    background: #f8f9fa;
+}
+
+.time-slot.selected {
+    background: #1a1a1a;
+    border-color: #1a1a1a;
+    color: white;
+}
+
+.time-slot.disabled {
+    background: #f5f5f5;
+    color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Pax Controls */
+.pax-btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+/* Add-on Cards */
+.addon-card {
+    transition: all 0.3s;
+}
+
+.addon-card.selected {
+    border-color: #1a1a1a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.addon-image-placeholder {
+    width: 80px;
+    height: 80px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addon-badge {
+    font-size: 0.7rem;
+}
+
+/* Input Filled State */
+.form-control.filled {
+    background: #e8f4fd;
+    border-color: #e8f4fd;
+}
+
+/* Agreement Card */
+.agreement-card {
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.agreement-card.checked {
+    border-color: #1a1a1a;
+    background: #f8f9fa;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    background: white;
+    border-top: 1px solid #e5e5e5;
+    padding: 1.5rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+/* Theme Image Small */
+.theme-image-small {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #8B7355 0%, #654321 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-bottom: 1.5rem;
+}
+
+/* Success Icon Animation */
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-icon {
+    animation: scaleIn 0.5s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+}
